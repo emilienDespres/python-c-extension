@@ -15,7 +15,9 @@ jobs:
         run: docker pull dockcross/windows-shared-x64
 
       - name: get helper script
-        run: docker run --rm dockcross/windows-shared-x64 > ./dockcross
+        run: [
+          docker run --rm dockcross/windows-shared-x64 > ./dockcross
+          chmod +x ./dockcross
 
       - name: build 00
         run: |
