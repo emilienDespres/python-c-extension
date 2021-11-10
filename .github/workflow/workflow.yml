@@ -1,0 +1,23 @@
+name: Dockcross Action Sandbox
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: pull dockcross
+        run: docker pull dockcross/windows-shared-x64
+
+      - name: get helper script
+        run: docker run --rm dockcross/windows-shared-x64 > ./dockcross
+
+      - name: build 00
+        run: |
+          cd 00-HelloWorld
+          ../dockcross pip install .
