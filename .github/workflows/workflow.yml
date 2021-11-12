@@ -19,10 +19,10 @@ jobs:
           docker run --rm myimage00 > ./dockcross
           chmod +x ./dockcross
 
-      - name: build 00-HelloWorld
-        run: |
-          cd 00-HelloWorld
-          ../dockcross pip install .
+      # - name: build 00-HelloWorld
+      #   run: |
+      #     cd 00-HelloWorld
+      #     ../dockcross pip install .
 
       - name: test
         run : |
