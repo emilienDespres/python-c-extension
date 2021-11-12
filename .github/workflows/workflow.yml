@@ -26,4 +26,4 @@ jobs:
 
       - name: test
         run : |
-          ../dockcross python3 00-HelloWorld/test.py
+          ./dockcross python3 00-HelloWorld/test.py
