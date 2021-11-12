@@ -8,4 +8,3 @@ RUN python3 --version
 RUN python3 -m pip install --upgrade pip
 
 RUN python3 -m pip install build
-Run sudo apt-get install -y python-dev
