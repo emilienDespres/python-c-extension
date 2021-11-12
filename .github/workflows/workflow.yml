@@ -12,14 +12,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: pull dockcross
-        run: docker pull dockcross/manylinux2014-x64
+        run: docker build -f 00-HelloWorld/Dockerfile -t my image00 .
 
       - name: get helper script
         run: |
-          docker run --rm dockcross/manylinux2014-x64 > ./dockcross
+          docker run --rm myimage00 > ./dockcross
           chmod +x ./dockcross
 
-      - name: build 00
+      - name: build 00-HelloWorld
         run: |
           cd 00-HelloWorld
           ../dockcross pip install .
