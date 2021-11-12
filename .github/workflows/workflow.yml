@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: pull dockcross
-        run: docker build -f 00-HelloWorld/Dockerfile -t my image00 .
+        run: docker build -f 00-HelloWorld/Dockerfile -t myimage00 .
 
       - name: get helper script
         run: |
