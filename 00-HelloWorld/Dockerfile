@@ -1,4 +1,4 @@
-FROM dockcross/android-x86_64
+FROM dockcross/linux-arm64
 
 ENV DEFAULT_DOCKCROSS_IMAGE myimage00
 
