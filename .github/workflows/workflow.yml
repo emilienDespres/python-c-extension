@@ -23,7 +23,7 @@ jobs:
         run: |
           cd 00-HelloWorld
           echo "$CC"
-          ./dockcross bash -c "echo '$CC'"
+          ../dockcross bash -c "echo '$CC'"
           ../dockcross bash -c "pip install ."
 
       - name: test
