@@ -12,11 +12,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: pull dockcross
-        run: docker pull dockcross/windows-shared-x64
+        run: docker pull dockcross/manylinux2014-x64
 
       - name: get helper script
         run: |
-          docker run --rm dockcross/windows-shared-x64 > ./dockcross
+          docker run --rm dockcross/manylinux2014-x64 > ./dockcross
           chmod +x ./dockcross
 
       - name: build 00
